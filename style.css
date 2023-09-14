@@ -1,25 +1,108 @@
-* {display: flex;
+/* ASPECTOS GENERALES */
+
+ * {display: flex;
     flex-direction: column;
 }
 
-
-.inicio {
-    background-color: #1f2937;
+title {
+    display: none;
 }
+body {
+    height: 100vh;
+    margin: 0%;
+  }
+  
 
 a {
     text-decoration: none;
 }
 
+a:visited {
+    text-decoration: none;
+    color: #e5e7eb; /*Ver que hacemos con esto cuando salga la parte de arriba*/
+}
+
+/* CABECERA */
+
+.inicio {
+    background-color: #1f2937;
+    align-items: center;
+}
+
+    /*HEADER*/
+
+.header {
+
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px ;
+    width: 1300px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+.links {
+    flex-direction: row;
+    font-size: 24px;
+    gap: 2em;
+}
+    /*Main Text*/
+
+.container-main {
+    width: 1300px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+    flex-direction: column;
+    padding: 25px;
+    gap: 1em;
+}
+
+.big {
+   font-weight: 900; 
+   color: #F9FAF8;
+   font-size: 48px;
+}
+
+.secondary{
+    font-size: 26px;
+    font-weight: 400;
+    color: #e5e7eb;
+}
+
+.boton {
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #3882f6;
+}
+
+.fot {
+    width: 600px;
+    height: auto;
+    padding: 25px;
+}
+
+
 /* Parte de imagenes y informacion */
 .information {
+    flex-grow: 1;
     text-align: center;
     color: #1f2937;
     font-size: 36px;
     font-weight: 900;
     display: flex;
     margin: 50px;
-    flex: 1;
     
 }
 
@@ -30,10 +113,10 @@ a {
 .imagenes {
     flex-direction: row;
     text-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    text-align: center;
-    gap: 100px;
+    text-align:center;
+    gap: 50px;
 }   
 .img {   
     align-items: center;
@@ -42,36 +125,37 @@ a {
 }
 
 img {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
 }
 .imgtext {
-    width: 200px;
+    width: 250px;
     text-wrap: wrap;
-    font-size: 22px;
+    font-size: 26px;
     color: black;
     font-weight: 400;
     align-items: center;
 
 }
 .pic {
-    border: 5px solid #3882f6;
-    border-radius: 15px;
-    height: 300px;
-    width: 300px;
+    border: 5px solid gray;
+    border-radius: 10px;
+    height: 350px;
+    width: 350px;
 }
 
 /* CITA */
 
 .cita {
+    flex-grow: 1;
     background-color: #e5e7eb;
-    /*flex: 1;*/
     align-items: center;
     padding: 100px 50px;
+    gap: 1em;
 }
 .quote {
     height: auto;
-    width: 1000px;
+    width: 1200px;
     font-size: 36px;
     font-weight: 400;
     color: #1f2937;
@@ -81,13 +165,15 @@ img {
 }
 .reference {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 25px;
     align-items: end;
+    margin-top: 15px;
 }
 
 /*CONTACTO*/
 
 .container-contacto{
+    flex-grow: 1;
     align-items: center;
 }
 
@@ -95,7 +181,7 @@ img {
     background-color: #3882f6;
     margin: 100px 150px;
     height: 200px;
-    width: 1100px;
+    width: 1300px;
     justify-content: center;
 }
 
@@ -113,7 +199,6 @@ img {
     border-radius: 12px;
     align-items: center;
     justify-content: center;
-    color: white;
     font-size: 25px;
     font-weight: bold;
 }
@@ -132,7 +217,8 @@ img {
 
 /* FOOTER */
 .footer {
-    height: 50px;
+    height: 100px;
+    width: 100%;
     background-color: #1f2937;
     font-size: 18px;
     color: #e5e7eb;
